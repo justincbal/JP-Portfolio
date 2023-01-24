@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: "Comfortaa", cursive;
+}
+
+$DarkBlue: #050e26;
+$LightBlue: #12265e;
+$White: #f7f7f7;
+
+.content {
+  background-color: $LightBlue;
+  padding: 15px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  .menu {
+    height: 10vh;
+  }
+
+  .hamburger-menu {
+    background-color: $White;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-content: center;
+    border-radius: 15px;
+    .ham-menu {
+      width: 30px;
+    }
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+
+  .nav {
+    height: 100vh;
+    width: 45vw;
+    background-color: rgba($color: #f7f7f7, $alpha: 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    transition: ease-in;
+
+    .exit {
+      position: absolute;
+      width: 25px;
+      top: 1%;
+      left: 5%;
+    }
+
+    .nav-listings {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      width: 100%;
+
+      .nav-item {
+        list-style: none;
+        font-size: 1.4rem;
+        border-bottom: 1px solid $DarkBlue;
+        width: 100%;
+        padding: 15px;
+        display: grid;
+        place-content: center;
+      }
+
+      .nav-tp {
+        border-top: 1px solid $DarkBlue;
+      }
+    }
+  }
+
+  .opening-intro {
+    text-align: center;
+    .intro-h1 {
+      color: $White;
+    }
+
+    .intro-h4 {
+      background-color: $White;
+      padding: 5px;
+      border-radius: 5px;
+      color: $LightBlue;
+    }
+  }
+}
